@@ -20,3 +20,10 @@ export const todosSchema = mySchema.table('todos', {
 export const userRelations = relations(usersSchema, ({ many }) => ({
   todos: many(todosSchema),
 }));
+
+export const todoRelations = relations(todosSchema, ({ one }) => ({
+  user: one(usersSchema, {
+    fields: [todosSchema.userId],
+    references: [usersSchema.id],
+  })
+}));

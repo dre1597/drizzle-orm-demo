@@ -1,0 +1,26 @@
+{
+  "name": "drizzle-orm-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx watch -r dotenv/config src/index.ts",
+    "instrospect": "drizzle-kit introspect:pg",
+    "generate": "drizzle-kit generate:pg",
+    "migrate": "tsx -r dotenv/config src/migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.1",
+    "postgres": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.3",
+    "drizzle-kit": "^0.20.6",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.2"
+  }
+}
